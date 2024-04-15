@@ -96,7 +96,7 @@ class LinkedList(object):
             raise Exception("IndexOutOfBounds Exception.") 
         if index == 0:
             self.remove_first()
-        elif index == self.count:
+        elif index == self.count - 1:
             self.remove_last()
         else:
             counter = 1
@@ -196,6 +196,8 @@ if __name__ == '__main__':
 
     l.reverse()
     l.add_last(1)
+    
+    l.remove_at(3)
 
     print(l)
     print(f'The size of Linked List is: {len(l)}')
