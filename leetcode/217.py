@@ -1,5 +1,20 @@
+from typing import List
+
 class Solution(object):
-    def contains_duplicate(self, nums: list[int]) -> bool:
+    def contains_duplidate(self, nums: List[int]) -> bool:
+        #? Time Complexity: O(n^2)
+        #? Space Complexity: O(1)
+        for i in range(len(nums)):
+            for j in range(i, len(nums) - 1):
+                if nums[i] == nums[j]:
+                    return True
+                
+        return False
+    
+    def contains_duplicate(self, nums: List[int]) -> bool:
+        #? Time Complexity: O(n)
+        #? Space Complexity: O(n)
+        
         hashset = set()
         
         for num in nums:
